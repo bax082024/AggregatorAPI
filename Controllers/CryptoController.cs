@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 using AggregatorAPI.Services;
+using Microsoft.AspNetCore.Http.Connections;
 
 namespace AggregatorAPI.Controllers
 {
@@ -20,6 +21,14 @@ namespace AggregatorAPI.Controllers
         {
             var price = await _cryptoService.GetBitcoinPriceAsync();  
             return Ok(new { BitcoinPriceUSD = price });
+        }
+
+        [HttpGet("Etherium")]
+        public async Task<IActionResult> GetEtheriumPrice()
+        {
+            var price = await _cryptoService.
+            GetEtheriumPriceAsync();
+            return Ok(new { EtheriumPrice = price});
         }
     }
 }
