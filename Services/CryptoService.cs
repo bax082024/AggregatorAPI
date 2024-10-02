@@ -20,12 +20,15 @@ namespace AggregatorAPI.Services
             return jsonDoc.RootElement.GetProperty("bpi").GetProperty("USD").GetProperty("rate_float").GetDecimal();
         }
 
-        public async Task<decimal> GetEtheriumPriceAsync()
+        public async Task<decimal> GetEthereumPriceAsync()
         {
-            var response = await _httpClient.GetStringAsync("https://api.coindesk.com/v1/eth/price");
-            var jsonDoc = JsonDocument.Parse(response);
-            return jsonDoc.RootElement.GetProperty("price").GetDecimal();
+            var response = await _httpClient.GetStringAsync("https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd");
+            using JsonDocument jsonDoc = JsonDocument.Parse(response);
+            
+            
+            return jsonDoc.RootElement.GetProperty("ethereum").GetProperty("usd").GetDecimal();
         }
+
         
 
         

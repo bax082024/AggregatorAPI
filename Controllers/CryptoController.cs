@@ -23,12 +23,12 @@ namespace AggregatorAPI.Controllers
             return Ok(new { BitcoinPriceUSD = price });
         }
 
-        [HttpGet("Etherium")]
-        public async Task<IActionResult> GetEtheriumPrice()
+        [HttpGet("ethereum")]
+        public async Task<IActionResult> GetEthereumPrice()
         {
             var price = await _cryptoService.
-            GetEtheriumPriceAsync();
-            return Ok(new { EtheriumPrice = price});
+            GetEthereumPriceAsync();
+            return Ok(new { EthereumPrice = price});
         }
     }
 }
