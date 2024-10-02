@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\busch\\Documents\\projects\\AggregatorAPI\\AggregatorAPI\\AggregatorAPI.csproj": {}
+    "C:\\HjemmeKode\\C-Sharp\\C-Sharp\\AggregatorAPI\\AggregatorAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\busch\\Documents\\projects\\AggregatorAPI\\AggregatorAPI\\AggregatorAPI.csproj": {
+    "C:\\HjemmeKode\\C-Sharp\\C-Sharp\\AggregatorAPI\\AggregatorAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\busch\\Documents\\projects\\AggregatorAPI\\AggregatorAPI\\AggregatorAPI.csproj",
+        "projectUniqueName": "C:\\HjemmeKode\\C-Sharp\\C-Sharp\\AggregatorAPI\\AggregatorAPI.csproj",
         "projectName": "AggregatorAPI",
-        "projectPath": "C:\\Users\\busch\\Documents\\projects\\AggregatorAPI\\AggregatorAPI\\AggregatorAPI.csproj",
+        "projectPath": "C:\\HjemmeKode\\C-Sharp\\C-Sharp\\AggregatorAPI\\AggregatorAPI.csproj",
         "packagesPath": "C:\\Users\\busch\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\busch\\Documents\\projects\\AggregatorAPI\\AggregatorAPI\\obj\\",
+        "outputPath": "C:\\HjemmeKode\\C-Sharp\\C-Sharp\\AggregatorAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\busch\\AppData\\Roaming\\NuGet\\NuGet.Config"

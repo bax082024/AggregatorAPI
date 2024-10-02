@@ -6,18 +6,18 @@ namespace AggregatorAPI.Services
 {
     public class CryptoService : ICryptoService
     {
-        private readonly HttpClient _HttpClient;
+        private readonly HttpClient _httpClient;
 
         public CryptoService(HttpClient httpClient)
         {
-            _HttpClient = HttpClient;
+            _httpClient = httpClient;  
         }
 
         public async Task<decimal> GetBitcoinPriceAsync()
         {
-            var response = await _HttpClient.GetStringAsync("https://api.coindesk.com/v1/bpi/currentprice/BTC.json");
-            var JsonDoc = JsonDocument.Parse(response);
-            return JsonDoc.RootElement.GetProperty("bpi").GetProperty("bpi").GetProperty("USD").GetProperty("rate_float"). GetDecimal();
+            var response = await _httpClient.GetStringAsync("https://api.coindesk.com/v1/bpi/currentprice/BTC.json");
+            var jsonDoc = JsonDocument.Parse(response);
+            return jsonDoc.RootElement.GetProperty("bpi").GetProperty("USD").GetProperty("rate_float").GetDecimal();
         }
     }
 }
