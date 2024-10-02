@@ -19,5 +19,16 @@ namespace AggregatorAPI.Services
             var jsonDoc = JsonDocument.Parse(response);
             return jsonDoc.RootElement.GetProperty("bpi").GetProperty("USD").GetProperty("rate_float").GetDecimal();
         }
+
+        public async Task<decimal> GetEtheriumPriceAsync()
+        {
+            var response = await _httpClient.GetStringAsync("https://api.coindesk.com/v1/eth/price");
+            var jsonDoc = JsonDocument.Parse(response);
+            return jsonDoc.RootElement.GetProperty("price").GetDecimal();
+        }
+        
+
+        
+
     }
 }
