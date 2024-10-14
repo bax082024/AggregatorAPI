@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 using AggregatorAPI.Services;
 using Microsoft.AspNetCore.Http.Connections;
+using System.Reflection.Metadata.Ecma335;
 
 namespace AggregatorAPI.Controllers
 {
@@ -39,6 +40,10 @@ namespace AggregatorAPI.Controllers
         }
 
         [HttpGet("silver")]
-        public async Task<IActionResult>
+        public async Task<IActionResult> GetSilverPrice()
+        {
+            var price = await _cryptoService.GetSilverPriceAsync();
+            return Ok(new { SilverPrice = price});
+        }
     }
 }
