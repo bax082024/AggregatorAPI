@@ -6,6 +6,8 @@ namespace AggregatorAPI.Services
     {
         Task<decimal> GetBitcoinPriceAsync();
         Task<decimal> GetEthereumPriceAsync();
+        Task<decimal> GetGoldPriceAsync();
+        Task<decimal> GetSilverPriceAsync();
 
     }
 }

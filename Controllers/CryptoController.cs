@@ -30,5 +30,14 @@ namespace AggregatorAPI.Controllers
             GetEthereumPriceAsync();
             return Ok(new { EthereumPrice = price});
         }
+
+        [HttpGet("gold")]
+        public async Task<IActionResult> GetGoldPrice()
+        {
+            var price = await _cryptoService.GetGoldPriceAsync();
+            return Ok(new { GoldPrice = price });
+        }
+
+        [HttpGet("silver")]
     }
 }
