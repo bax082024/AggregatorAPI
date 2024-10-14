@@ -39,5 +39,6 @@ namespace AggregatorAPI.Controllers
         }
 
         [HttpGet("silver")]
+        public async Task<IActionResult>
     }
 }
