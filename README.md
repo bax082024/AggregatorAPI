@@ -31,4 +31,4 @@ Hello i made this API to practice, it will be an API containing information abou
 - http://localhost:5008/swagger
 
 
-- Currently contains information from 2 external Api`s
+- Currently contains information from 3 external Api`s
