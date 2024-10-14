@@ -3,7 +3,7 @@
 
 ## Introduction
 
-Hello i made this API to practice, it will be an API containing information about : Crypto price, weather etc.
+Hello i made this API to practice, it will be an API containing information about : Crypto price, weather etc. the goal is to collect information from different external api`s
 
 
 
