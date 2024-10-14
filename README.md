@@ -15,3 +15,6 @@ Hello i made this API to practice, it will be an API containing information abou
 
 **Ethereum price**
 - http://localhost:5008/api/v1/crypto/ethereum
+
+**Gold Price**
+- http://localhost:5008/api/v1/crypto/gold
