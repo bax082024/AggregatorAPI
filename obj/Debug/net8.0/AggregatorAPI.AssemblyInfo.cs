@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AggregatorAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dbc54f2b2f476e396dee9eae8b3443a220ad1101")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+24f35b6fc6917b466a20896d9b77325cc8fc339e")]
 [assembly: System.Reflection.AssemblyProductAttribute("AggregatorAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AggregatorAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
