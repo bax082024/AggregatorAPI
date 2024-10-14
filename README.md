@@ -22,7 +22,8 @@ Hello i made this API to practice, it will be an API containing information abou
 **Silver Price**
 - http://localhost:5008/api/v1/crypto/silver
 
-
+**Weather**
+- http://localhost:5008/api/v1/weather
 
 
 
