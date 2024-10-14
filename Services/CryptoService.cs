@@ -29,7 +29,29 @@ namespace AggregatorAPI.Services
             return jsonDoc.RootElement.GetProperty("ethereum").GetProperty("usd").GetDecimal();
         }
 
-        
+        public async Task<decimal?> GetGoldPriceAsync()
+        {
+            var response = await _httpClient.GetStringAsync("https://metals-api.com/api/latest?access_key=YOUR_API_KEY&base=USD&symbols=XAU");
+            using JsonDocument JsonDoc = JsonDocument.Parse(response);
+
+            if (JsonDoc.RootElement.GetProperty("rates").TryGetProperty("XAU", out var goldElement))
+            {
+                return goldElement.GetDecimal();
+            }
+            return null;
+        }
+
+        public async Task<decimal?> GetSilverPriceAsync()
+        {
+            var response = await _httpClient.GetStringAsync("https://metals-api.com/api/latest?access_key=YOUR_API_KEY&base=USD&symbols=XAG");
+            using JsonDocument jsonDoc = JsonDocument.Parse(response);
+
+            if (jsonDoc.RootElement.GetProperty("rates").TryGetProperty("XAG",, out var silverElement))
+            {
+                return silverElement.GetDecimal();
+            }
+            return null;
+        }
 
         
 
