@@ -11,6 +11,7 @@ namespace AggregatorAPI.Services
         public CryptoService(HttpClient httpClient)
         {
             _httpClient = httpClient;  
+            _httpClient.DefaultRequestHeaders.Add("x-access-token", "goldapi-10848q19m29e8459-io");
         }
 
         public async Task<decimal> GetBitcoinPriceAsync()
@@ -31,22 +32,22 @@ namespace AggregatorAPI.Services
 
         public async Task<decimal?> GetGoldPriceAsync()
         {
-            var response = await _httpClient.GetStringAsync("https://metals-api.com/api/latest?access_key=YOUR_API_KEY&base=USD&symbols=XAU");
-            using JsonDocument JsonDoc = JsonDocument.Parse(response);
+            var response = await _httpClient.GetStringAsync("https://www.goldapi.io/api/XAU/USD");
+            using JsonDocument jsonDoc = JsonDocument.Parse(response);
 
-            if (JsonDoc.RootElement.GetProperty("rates").TryGetProperty("XAU", out var goldElement))
-            {
-                return goldElement.GetDecimal();
-            }
-            return null;
+            if (jsonDoc.RootElement.TryGetProperty("price", out var priceElement))
+        {
+            return priceElement.GetDecimal(); 
+        }
+        return null;
         }
 
         public async Task<decimal?> GetSilverPriceAsync()
         {
-            var response = await _httpClient.GetStringAsync("https://metals-api.com/api/latest?access_key=YOUR_API_KEY&base=USD&symbols=XAG");
+            var response = await _httpClient.GetStringAsync("https://www.goldapi.io/api/XAG/USD");
             using JsonDocument jsonDoc = JsonDocument.Parse(response);
 
-            if (jsonDoc.RootElement.GetProperty("rates").TryGetProperty("XAG",, out var silverElement))
+            if (jsonDoc.RootElement.TryGetProperty("price", out var silverElement))
             {
                 return silverElement.GetDecimal();
             }
