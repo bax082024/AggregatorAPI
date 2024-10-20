@@ -38,7 +38,10 @@ namespace AggregatorAPI.Services
       return forexRates;
     }
 
-
-  }
+        public Task<Dictionary<string, decimal>> GetForexRatesAsync(string currencies, string source = "NOK")
+        {
+            throw new NotImplementedException();
+        }
+    }
 
 }
