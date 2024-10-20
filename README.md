@@ -25,6 +25,9 @@ Hello i made this API to practice, it will be an API containing information abou
 **Weather**
 - http://localhost:5008/api/v1/weather
 
+**Forex**
+-http://localhost:5008/api/v1/forex
+
 
 
 **Swagger**
