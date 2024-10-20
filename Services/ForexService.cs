@@ -28,7 +28,11 @@ namespace AggregatorAPI.Services
 
       foreach (var currency in currencyList)
       {
-        string key = $"{}"
+        string key = $"{source.ToUpper()}{currency.ToUpper()}";
+        if (quotes.TryGetProperty(key, out var value))
+        {
+          forexRates[currency] = value.GetDecimal();
+        }
       }
     }
 
