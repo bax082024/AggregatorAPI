@@ -34,6 +34,8 @@ namespace AggregatorAPI.Services
           forexRates[currency] = value.GetDecimal();
         }
       }
+
+      return forexRates;
     }
 
 
