@@ -24,7 +24,7 @@ namespace AggregatorAPI.Services
       var quotes = jsonDoc.RootElement.GetProperty("quotes");
 
       var forexRates = new Dictionary<string,decimal>();
-      var currencyList = currencies.Split(', ')
+      var currencyList = currencies.Split(',');
 
       foreach (var currency in currencyList)
       {
